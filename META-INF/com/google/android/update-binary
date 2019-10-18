@@ -15,7 +15,6 @@ umask 022
 # Initial Cleanup
 rm -rf $TMPDIR 2>/dev/null
 mkdir -p $INSTALLER
-
 # Extract Unityfiles
 unzip -o "$ZIP" 'common/unityfiles.tar.xz' -d $INSTALLER >&2
 [ -f "$INSTALLER/common/unityfiles.tar.xz" ] || { echo "! Unable to extract zip file !"; exit 1; }
